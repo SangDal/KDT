@@ -1,0 +1,75 @@
+day1.txt 이어서 하기..
+
+ * Git Repository Fork
+ - 하나의 큰 상자(컨테이너, Repository)를 다른 계정(또는 네임스페이스)으로 복사하는 기능
+ - git에 존재하는 명령어가 아니다. [git명령어가 아니기 때문에 터미널에서 사용할 수 없다]
+        https://github.com/tiangolo/fastapi [웹서버 개발하는 사람 ]
+ - 미리 올려져 있는 API를 다운 받아서 내가 기능을 추가하고 "내 기능 좋아 ~ 업데이트해줘 ~"라고 요청도 가능하다. 
+ - 다른사람의 github 계정의 Repository에서 fork를 눌러 내 계정의 Repository로 복사
+ ✔ 다른 사람과 협업하기
+  - 원하는 Repository의 "Settings"에서 "Collaborators"눌러서 협업 할사람 이메일을 넣어주면 됩니다. 
+ ✔ Repository 삭제하기 
+  - 원하는 Repository의 "Settings"에서 맨아래 "Danger Zone"에서 "Delete this Repository" 클릭 
+
+ * Git Repository Clone
+  - git에 있는 기능으로 터미널에서 명령어 사용 가능
+  - Repository를 로컬 시스템에 복제하는 방법입니다. 
+  - 지금까지 모든 Repository의 히스토리가 포함 된다. 
+        git clone git주소       {폴더를 생성}
+        git clone git주소 .     {폴더를 생성하지 않음}
+
+        git clone https://github.com/SangDal/test.git
+        git clone https://github.com/SangDal/test.git .
+
+ ** Clone과 Fork의 차이
+  - Clone
+    'A' Repository -> Clone -> 내컴퓨터에 저장
+
+  - Fork
+    'A' Repository -> Fork ->'B' Repository -> Clone
+
+ * Github Desktop
+  - https://desktop.github.com/
+
+ * Branch (브렌치)
+  - 작업에 대한 나무가지 라고 생각하면 됩니다.
+  - 큰 줄기에 영향을 주지 않고 가지에서만 작업을 할 수 있음
+  - git 에서 저장소의 기록에서 특정 커밋에 대한 포인터라고 보면 된다. 
+  - 각 브랜치는 자쳇 커밋 및 변경 세트를 가질 수 있음 
+  - 브랜치를 사용하여 저장소의 메인 분기에 영향을 미치지 않고 여러 기능이나 버그 수정을 동시에 수행할 수 있음 
+
+  ✔ Pull Request
+   - 당기기를 요청(다른 작업자가 push를 했으니 해당 자료를 가져가도록 하는게 pull request)
+   - 실무에서는 PR이라고 많이들 얘기 한다. 
+   - PR은 저장소에 대한 변경 사항을 제안하고, 다른 개발자와 협업하는 방법
+   - PR은 일반적으로 소프트웨어 개발에서 코드 변경을 제안하고 검토하며 저장소의 브랜치를 병합하는 데 사용 한다. 
+
+** 예제 시나리오()
+
+    PR 만들기 
+        * 새로운 브랜치를 만들고 코드를 수정한다. 
+        * 원격 저장소에 해당 브랜치를 Push 
+    PR 리뷰
+        * 함께 작업하는 작업자가 해당 PR을 리뷰한다. 
+        * 문제가 될만한 부분이 없는지 체크 한다. 
+    PR Merge
+        * 브랜치는 새로운 분기가 생기는 것이므로 PR Merge를 통해 다시 병합을 한다.
+        * 병합 후 더이상 필요없는 브랜치는 삭제할 수 있음
+    PR Close
+        * 문제가 있거나, 중복된 경우, 더이상 필요없는 PR은 닫을 수 있다. 
+        * PR을 열어둔 상태에서 기존 Branch에 Commit 하면 PR에도 모두 적용 된다. 
+
+ * Branch(브랜치) 변경
+        git checkout -b 브랜치명 
+
+✔ .gitignore
+ - 프로젝트에 원하지 않은 백업 파일이나 로그파일 또는 보안상 깃허브에 올리고 싶지 않은 파일들을 제외시킬 수 있는 설정파일 
+    깃 이그노어 사이트 :https://www.toptal.com/developers/gitignore/
+
+ * fetch
+  - 원격 저장소에서 소스를 가져오기 Merge를 사용하지 않음 
+        git fetch origin
+
+ * pull
+  - 원격 저장소에서 fetch 명령어로 가져온 후 Merge까지 한번에 실행하는 명령어이다. 
+        git pull origin
