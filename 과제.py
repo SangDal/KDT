@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 
-#조윤재학생 코드 보고 했습니다. 
 
 # 이미지 불러오기
 image = cv2.imread("namecard.jpg")
