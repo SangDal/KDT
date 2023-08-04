@@ -1,1 +1,25 @@
+# 2. 테서렉트(Tesseract)
+* 오픈 소스 OCR 라이브러리로 구글에서 개발하고 현재는 여러 커뮤니티에 의해 유지 보수 하고 있다.
 
+* 다운로드 사이트 https://github.com/UB-Mannheim/tesseract/wiki
+
+* 윈도우 일때 다운로드: ![image-2.png](attachment:image-2.png)
+* 설치중:
+    * Choose Components에서 Additional script data(다운로드) 트리를 내려 ![image.png](attachment:image.png) 사진의 두개 체크.
+    * Additional language data(다운로드) 에서도 korean을 체크![image-3.png](attachment:image-3.png)
+* 설치 위치 저장해두기:
+    * C:\Program Files\Tesseract-OCR
+* 환경 설정: 환경설정이 자동으로 등록 되지 않기 때문에 우리가 직접 잡아줘야한다.
+    * ![image-5.png](attachment:image-5.png)
+    * Path를 찾은후 편집을 눌러줍니다. ![image-6.png](attachment:image-6.png)
+    * 새로 만들기 클릭! -> 테서렉트 설치 경로를 추가 해줍니다. ![image-7.png](attachment:image-7.png)
+
+(8월 4일)
+금요일 오전 발표 과제
+- EasyOCR
+- PaddleOCR
+- naver OCR(인식율은 좋으나 네이버 개발자 모드에서 API를 이용해야 한다. )
+등등등
+위 3개이상의 라이브러리 또는 API를 이용하여 OCR 프로젝트을 개발
+(예시) = 차량 번호 인식, 간판, 주민등록증, 운전면허증 ... 주제 선정후
+각 라이브러리 또는 API의 장단점 비교 분석 하기
